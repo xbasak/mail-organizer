@@ -43,7 +43,6 @@ class MainWindow(QMainWindow):
             if item.checkState() == Qt.Checked:
                 checkedItems.append(item.text())
 
-
         if checkedItems:
             self.network_process = NetworkProcess(self.server, self.username, self.password,self.mail, checkedItems, self.window)
             self.network_process.signals.progress_updated.connect(self.progress_update)
