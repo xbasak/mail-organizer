@@ -2,3 +2,5 @@ o2@o2.pl
 no-response@o2.pl
 noreply@1login.wp.pl
 wp@wp.pl
+mailing@interia.pl
+newsletter@email3.gog.com

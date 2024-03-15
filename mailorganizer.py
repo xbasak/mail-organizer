@@ -129,7 +129,6 @@ class NetworkProcess(threading.Thread):
                 for num in message_numbers:
                     if not self.running:
                         break
-                    print(num)
                     _, message_data = self.mail.fetch(num, "(RFC822)")
                     try:
                         message_data_bytes = message_data[0][1]
@@ -137,7 +136,6 @@ class NetworkProcess(threading.Thread):
                         mail_source = message['From']
                         if message_data is not None:
                             for source in lines:
-                                print(mail_source.find(source))
                                 if mail_source.find(source) > 0:
                                     self.mail.store(num, '+FLAGS', '\\Deleted')
                                     counter += 1
